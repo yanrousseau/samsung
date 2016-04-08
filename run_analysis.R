@@ -42,7 +42,7 @@ run_analysis <- function() {
     dfTT   <- data.frame(datTT)
     
     # 2. Select the data corresponding to mean and standard deviation variables.
-    idxMSD  <- c(1, 2, grep("mean|std",datFeatures[,2])+2)
+    idxMSD  <- c(1, 2, grep("mean\\(|std\\(",datFeatures[,2])+2)
     dfTTMSD <- select(dfTT, idxMSD)
 
     # 3. Name activities in the data set.
@@ -50,9 +50,19 @@ run_analysis <- function() {
     
     # 4. Provide descriptive variable names while removing unnecessary
     #    characters.
-    datNames       <- c("Activity", "Subject", datFeatures[,2])
+    datNames       <- c("activity", "subject", datFeatures[,2])
     datNames       <- gsub("\\(","",datNames)
     datNames       <- gsub("\\)","",datNames)
+    datNames       <- gsub("Body","-body",datNames)
+    datNames       <- gsub("Gravity","-gravity",datNames)
+    datNames       <- gsub("Acc","-acc",datNames)
+    datNames       <- gsub("Jerk","-jerk",datNames)
+    datNames       <- gsub("Gyro","-gyro",datNames)
+    datNames       <- gsub("Mag","-mag",datNames)
+    datNames       <- gsub("X","x",datNames)
+    datNames       <- gsub("Y","y",datNames)
+    datNames       <- gsub("Z","z",datNames)
+    datNames       <- tolower(datNames)
     names(dfTTMSD) <- datNames[idxMSD]
         
     # 5. Create an independent tidy data set with the average of each variable
@@ -60,7 +70,7 @@ run_analysis <- function() {
     #    because no longer required. The headers of the two new columns are
     #    renamed.
     res <- suppressWarnings(aggregate(x=dfTTMSD,
-               by=list(dfTTMSD$Activity,dfTTMSD$Subject), FUN=mean))
+               by=list(dfTTMSD$activity,dfTTMSD$subject), FUN=mean))
     names(res)[1:2] <- names(res)[3:4]
     res             <- res[c(1:2,5:ncol(res))]
     write.table(res, file="tidy.txt", row.name=FALSE)
