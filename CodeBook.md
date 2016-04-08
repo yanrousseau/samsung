@@ -17,4 +17,4 @@ The following transformations were done to transform a set of data files into a 
 
 4. Each column was assigned a descriptive variable name. The characters were transformed into lower case, parentheses were removed, and dashes were added to make the description easier to read.
 
-5.The average of each column is calculated, after aggregating the rows by activity and subject. Note that the former first two columns were removed since no longer required. Finally, the script exports a tidy data set that is space delimited. 
+5. The average of each column is calculated, after aggregating the rows by activity and subject. Note that the former first two columns were removed since no longer required. Finally, the script exports a tidy data set that is space delimited. 
