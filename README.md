@@ -1,4 +1,4 @@
-# Aggregation of Samsung S smartphone data using R
+# Aggregation of Samsung S smartphone data using R - README.md
 
 ## Description
 This function combines data files collected from Samsung Galaxy X smartphones and aggregates data by activity (walking, walking upstairs, walking downstairs, sitting, standing, or laying) and by subject (30 participants took part in data collection).
