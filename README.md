@@ -6,7 +6,7 @@ This function combines data files collected from Samsung Galaxy X smartphones an
 ## Procedure
 The script must be placed in the working directory, which also contains data files. A tidy file is returned in the same directory as the input data. The structure of the file system must be the following:
 
-## File
+## Files
 
 run_analysis.R -> R script
 
@@ -28,5 +28,26 @@ train/X_train.txt -> data file: values     associated with the training set
 
 train/y_train.txt -> data file: activities associated with the training set
 
-## Variables:
+## Variables
+Below, 'mean' represents the average value for the combination of one activity and one subject whereas 'std' refers to the standard deviation. X,Y,Z refers to the triaxial components of a given variable. The variables are the following:
 
+Activity: one of the six activites considered
+
+Subject: one of the participants in the study
+
+tBodyAcc
+tGravityAcc
+tBodyAccJerk
+tBodyGyro
+tBodyGyroJerk
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc
+fBodyAccJerk
+fBodyAccMag
+fBodyBodyAccJerkMag
+fBodyBodyGyroMag
+fBodyBodyGyroJerkMag
