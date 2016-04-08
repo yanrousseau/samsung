@@ -1,7 +1,7 @@
 # Aggregation of Samsung S smartphone data using R - CodeBook.md
 
 ## Data description
-This function combines data files collected from Samsung Galaxy S II smartphones and aggregates data by activity (walking, walking upstairs, walking downstairs, sitting, standing, or laying) and by subject (30 participants aged between 19-48 years took part in data collection). During the experiment, each participant was wearing the aforementioned smartphone devide on his/her waist. The accelerometer and gyroscope embedded in the smartphonecaptured triaxial linear acceleration and angular velocity at a constant rate of 50Hz. The dataset has been randomly partitioned into training data (70% of the volunteers) and test data (the remaining 30% of the volunteers).
+This function combines data files collected from Samsung Galaxy S II smartphones and aggregates data by activity (walking, walking upstairs, walking downstairs, sitting, standing, or laying) and by subject (30 participants aged between 19-48 years took part in data collection). During the experiment, each participant was wearing the aforementioned smartphone devide on his/her waist. The accelerometer and gyroscope embedded in the smartphone captured triaxial linear acceleration and angular velocity at a constant rate of 50Hz. The dataset has been randomly partitioned into training data (70% of the volunteers) and test data (the remaining 30% of the volunteers).
 
 ## Data transformations
 The following transformations were done on to transform the initial set of data files into a single tidy data file that is complete and contains the most relevant information:
