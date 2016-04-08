@@ -36,18 +36,35 @@ Activity: one of the six activites considered
 Subject: one of the participants in the study
 
 tBodyAcc
+
 tGravityAcc
+
 tBodyAccJerk
+
 tBodyGyro
+
 tBodyGyroJerk
+
 tBodyAccMag
+
 tGravityAccMag
+
 tBodyAccJerkMag
+
 tBodyGyroMag
+
 tBodyGyroJerkMag
+
 fBodyAcc
+
 fBodyAccJerk
+
+fBodyGyro
+
 fBodyAccMag
+
 fBodyBodyAccJerkMag
+
 fBodyBodyGyroMag
+
 fBodyBodyGyroJerkMag
