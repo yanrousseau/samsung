@@ -4,9 +4,10 @@
 This function combines data files collected from Samsung Galaxy X smartphones and aggregates data by activity (walking, walking upstairs, walking downstairs, sitting, standing, or laying) and by subject (30 participants took part in data collection).
 
 ## Procedure
-The script must be placed in the working directory, which also contains data files. A tidy file is returned in the same directory as the input data. The structure of the file system must be the following:
+The script must be placed in the working directory, which also contains data files. A tidy file is returned in the same directory as the input data.
 
 ## Files
+The working directory must contain the following files:
 
 run_analysis.R -> R script
 
@@ -29,7 +30,6 @@ train/X_train.txt -> data file: values     associated with the training set
 train/y_train.txt -> data file: activities associated with the training set
 
 ## Variables
-
 The name of each of the variables summarized in the tidy file is explained in this section. The 'mean' represents the average value for the combination of one activity and one subject whereas 'std' refers to its standard deviation. x,y,z refer to the triaxial components of a given variable. The prefix 't' identifies time domain signals at a frequency of 50 Hz and the prefix 'f' identifies the variables produced with a Fast Fourier Transformn on some of these signals. The measurement instruments were an accelerometer ('acc') and a gyroscope ('gyro'). The characters 'Jerk' correspond to Jerk signals, i.e. the result of body linear acceleration and angular velocity derived in time. Finally, a variable with the suffix 'Mag' corresponds to the the magnitude of the 3D signal, calculated using the Euclidean norm. The columns present in the tidy file produced are:
 
 activity: one of the six activites considered
